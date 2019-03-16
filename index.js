@@ -1,0 +1,19 @@
+$(function(){
+    $("#hbd").hide();
+    $("#click2").hide();
+    $("#img").hide();
+    $("#click").click(function(){
+        $("#click").hide();
+        $("#hbd").fadeIn(1500);
+        $("#click2").fadeIn(2000);
+        $("#click2").click(function(){
+            $("#hbd").hide();
+            $("#click2").hide().fadeIn(1000).text("ปิดเถอะ");
+            $("#img").fadeIn(3000);
+            $("#click2").click(function(){
+                $("#click2").fadeIn(300).text("ปิดดิ๊");
+                
+            });
+        });
+    });
+});
